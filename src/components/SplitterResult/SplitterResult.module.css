@@ -1,0 +1,32 @@
+.splitter_result_wrap {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+}
+
+.title {
+	margin-right: 5px;
+}
+
+.title > h3 {
+	color: white;
+}
+
+.title > span {
+	color: hsl(184, 14%, 56%);
+}
+
+.splitter_result_wrap > h2 {
+	font-size: 34px;
+	color: hsl(172, 67%, 45%);
+	word-break: break-all;
+}
+
+@media screen and (max-width: 480px) {
+	.splitter_result_wrap > h2 {
+		font-size: 26px;
+		color: hsl(172, 67%, 45%);
+	}
+}

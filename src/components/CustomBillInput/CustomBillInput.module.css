@@ -1,0 +1,123 @@
+:root {
+	--very-dark-cyan: hsl(183, 100%, 15%);
+	--grayish-cyan: hsl(184, 14%, 56%);
+	--light-grayish-cyan: hsl(185, 41%, 84%);
+	--very-light-grayish-cyan: hsl(189, 41%, 97%);
+	--strong-cyan: hsl(172, 67%, 45%);
+	/*  */
+	--white: hsl(0, 0%, 100%);
+	--sark-grayish-cyan: hsl(186, 14%, 43%);
+}
+
+.cstm_input {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+
+	width: 100%;
+	max-width: 500px;
+}
+
+.label_wrap {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.title_label {
+	color: var(--grayish-cyan);
+	padding: 0 5px;
+}
+
+.zero_bill_label {
+	color: red;
+	padding: 0 5px;
+}
+
+.cstm_input_main {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+
+	width: inherit;
+}
+
+.cstm_input_main > input[type='number'] {
+	padding: 10px 20px;
+	width: inherit;
+	height: 30px;
+
+	border: none;
+	outline: none;
+	border-radius: 5px;
+
+	background: var(--very-light-grayish-cyan);
+
+	font-size: 24px;
+	text-align: end;
+	color: var(--very-dark-cyan);
+
+	cursor: pointer;
+}
+
+.cstm_input_main > input[type='number']:focus {
+	outline: 2px solid var(--strong-cyan);
+	caret-color: var(--strong-cyan);
+}
+
+.cstm_input_main > input[type='number']:hover {
+	outline: 2px solid var(--strong-cyan);
+}
+
+.cstm_input_main > input[type='number']::placeholder {
+	color: var(--grayish-cyan);
+	font-size: 20px;
+}
+
+/* PLACEHOLDER X POSTITION */
+.placeholderX_start::placeholder {
+	text-align: start;
+}
+
+.placeholderX_center::placeholder {
+	text-align: center;
+}
+
+.placeholderX_end::placeholder {
+	text-align: end;
+}
+
+.cstm_input_icon {
+	position: absolute;
+	left: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background: var(--very-light-grayish-cyan);
+
+	width: 55px;
+	height: calc(100% - 15px);
+}
+
+.cstm_input_icon > svg > path {
+	fill: auto;
+}
+
+/*  VALIDATION INPUT  */
+.validation {
+	outline: 2px solid red !important;
+}
+
+/* MEDIA */
+@media screen and (max-width: 480px) {
+	.cstm_input_main > input[type='number']::placeholder {
+		font-size: 16px;
+	}
+}
